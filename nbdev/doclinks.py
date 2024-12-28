@@ -244,9 +244,12 @@ def _build_lookup_table(strip_libs=None, incl_libs=None, skip_mods=None):
     for m in strip_libs:
         if m in entries:
             _d = entries[m]
-            stripped = {remove_prefix(k,f"{mod}."):v
-                        for mod,dets in _d['syms'].items() if mod not in skip_mods
-                        for k,v in dets.items()}
+            stripped = {}
+            for mod, dets in _d['syms'].items():
+                if mod not in skip_mods:
+                    for k,v in dets.items():
+                        k = remove_prefix(k,f"{mod}.")
+                        if k not in stripped: stripped[k] = v
             py_syms = merge(stripped, py_syms)
     return entries,py_syms
 
