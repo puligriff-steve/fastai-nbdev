@@ -11,11 +11,15 @@ Here are some of nbdev's features:
 - **Seamless testing**: write tests as ordinary notebook cells, run them in parallel with a single command; out-of-the-box continuous integration with GitHub Actions to ensure tests pass before every merge
 - **Simplified package release**: publish packages to PyPI and conda; Python best practices are automatically followed (e.g. only exported objects are included in `__all__`)
 
-## Docs
+## Tutorials
 
 - [Getting started](https://nbdev.fast.ai/getting_started.html.md)
 - [Tutorial](https://nbdev.fast.ai/tutorials/tutorial.html.md)
 - [Best practices](https://nbdev.fast.ai/tutorials/best_practices.html.md)
+
+## API
+
+- [API List](https://nbdev.fast.ai//apilist.txt): A succint list of all functions and methods in nbdev.
 
 ## Optional
 
