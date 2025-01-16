@@ -1,0 +1,39 @@
+# nbdev
+
+nbdev makes exploration an integral part of your workflow, all while promoting software engineering best practices. It allows you to write, test, document, and distribute software packages and technical articles — all in one place, your notebook.
+
+Here are some of its features:
+
+- **Supports literate programming**: write prose, code, and tests in notebooks — no context-switching
+- **Git-friendly notebooks**: human-readable merge conflicts; no unwanted metadata
+- **Two-way sync between notebooks and plaintext source code**: allows you to use your IDE for code navigation or quick edits
+- **Beautiful technical documentation**: documentation is automatically generated using Quarto and hosted on GitHub Pages; docs support LaTeX, are searchable, and are automatically hyperlinked (including out-of-the-box support for many packages via nbdev-index)
+- **Seamless testing**: write tests as ordinary notebook cells, run them in parallel with a single command; out-of-the-box continuous integration with GitHub Actions to ensure tests pass before every merge
+- **Simplified package release**: publish packages to PyPI and conda; Python best practices are automatically followed (e.g. only exported objects are included in `__all__`)
+
+## Docs
+
+- [Getting started](https://nbdev.fast.ai/getting_started.html)
+- [Tutorial](https://nbdev.fast.ai/tutorial.html)
+- [API details for each submodule](https://nbdev.fast.ai/api)
+
+## Optional
+
+- [nbdev.config](https://nbdev.fast.ai/api/config.html): Configuring nbdev and bootstrapping notebook export
+- [nbdev.maker](https://nbdev.fast.ai/api/maker.html): Create one or more modules from selected notebook cells
+- [nbdev.process](https://nbdev.fast.ai/api/process.html): A notebook processor
+- [nbdev.export](https://nbdev.fast.ai/api/export.html): Exporting a notebook to a library
+- [nbdev.doclinks](https://nbdev.fast.ai/api/doclinks.html): Generating a documentation index from a module
+- [nbdev.sync](https://nbdev.fast.ai/api/sync.html): Propagate small changes in the library back to notebooks
+- [nbdev.merge](https://nbdev.fast.ai/api/merge.html): Fix merge conflicts in jupyter notebooks
+- [nbdev.showdoc](https://nbdev.fast.ai/api/showdoc.html): Display symbol documentation in notebook and website
+- [nbdev.frontmatter](https://nbdev.fast.ai/api/frontmatter.html): A YAML and formatted-markdown frontmatter processor
+- [nbdev.processor](https://nbdev.fast.ai/api/processors.html): Some processors for NBProcessor
+- [nbdev.clean](https://nbdev.fast.ai/api/clean.html): Strip superfluous metadata from notebooks
+- [nbdev.test](https://nbdev.fast.ai/api/test.html): Run unit tests on notebooks in parallel
+- [nbdev.cli](https://nbdev.fast.ai/api/cli.html): CLI commands
+- [nbdev.quarto](https://nbdev.fast.ai/api/quarto.html): Install and interact with Quarto from nbdev
+- [nbdev.qmd](https://nbdev.fast.ai/api/qmd.html): Basic qmd generation helpers (experimental)
+- [nbdev.migrate](https://nbdev.fast.ai/api/migrate.html): Utilities for migrating to nbdev
+- [nbdev.serve](https://nbdev.fast.ai/api/serve.html): A parallel ipynb processor (experimental)
+- [nbdev.release](https://nbdev.fast.ai/api/release.html): Auto-generated tagged releases and release notes from GitHub issues
