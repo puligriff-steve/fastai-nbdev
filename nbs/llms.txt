@@ -2,7 +2,7 @@
 
 nbdev makes exploration an integral part of your workflow, all while promoting software engineering best practices. It allows you to write, test, document, and distribute software packages and technical articles — all in one place, your notebook.
 
-Here are some of its features:
+Here are some of nbdev's features:
 
 - **Supports literate programming**: write prose, code, and tests in notebooks — no context-switching
 - **Git-friendly notebooks**: human-readable merge conflicts; no unwanted metadata
@@ -13,12 +13,19 @@ Here are some of its features:
 
 ## Docs
 
-- [Getting started](https://nbdev.fast.ai/getting_started.html)
-- [Tutorial](https://nbdev.fast.ai/tutorial.html)
-- [API details for each submodule](https://nbdev.fast.ai/api)
+- [Getting started](https://nbdev.fast.ai/getting_started.html.md)
+- [Tutorial](https://nbdev.fast.ai/tutorials/tutorial.html.md)
+- [Best practices](https://nbdev.fast.ai/tutorials/best_practices.html.md)
 
 ## Optional
 
+- [Git-Friendly Jupyter](https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html.md): How to use nbdev hooks for git-friendly Jupyter notebooks
+- [Blogging](https://nbdev.fast.ai/tutorials/blogging.html.md: Creating a blog with notebooks)
+- [Pre-Commit Hooks](https://nbdev.fast.ai/tutorials/pre_commit.html.md): How to use nbdev’s git pre-commit hooks
+- [Documentation Only Sites](https://nbdev.fast.ai/tutorials/docs_only.html.md): How to create nbdev powered docs without a library!
+- [Modular nbdev](https://nbdev.fast.ai/tutorials/modular_nbdev.html.md): How to use nbdev’s various tools separately
+- [Writing nbdev plugins](https://nbdev.fast.ai/tutorials/extensions.html.md): How to customize nbdev processors to do what you want
+- [nbdev1 Migration](https://nbdev.fast.ai/tutorials/migrating.html.md): How to change your nbdev1 repo to work with nbdev2
 - [nbdev.config](https://nbdev.fast.ai/api/config.html): Configuring nbdev and bootstrapping notebook export
 - [nbdev.maker](https://nbdev.fast.ai/api/maker.html): Create one or more modules from selected notebook cells
 - [nbdev.process](https://nbdev.fast.ai/api/process.html): A notebook processor
