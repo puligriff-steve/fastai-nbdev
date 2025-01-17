@@ -19,7 +19,7 @@ Here are some of nbdev's features:
 
 ## API
 
-- [API List](https://nbdev.fast.ai//apilist.txt): A succint list of all functions and methods in nbdev.
+- [API List](https://nbdev.fast.ai/apilist.txt): A succint list of all functions and methods in nbdev.
 
 ## Optional
 
