@@ -249,12 +249,12 @@ def add_init(path=None):
     if get_config().get('put_version_in_init', True): update_version(path)
 
 # %% ../nbs/api/01_config.ipynb
-def write_cells(cells, hdr, file, offset=0, cell_number=True):
+def write_cells(cells, hdr, file, offset=0, cell_number=True, solo_nb=False):
     "Write `cells` to `file` along with header `hdr` starting at index `offset` (mainly for nbdev internal use)."
     for cell in cells:
         if cell.cell_type=='code' and cell.source.strip():
             idx = f" {cell.idx_+offset}" if cell_number else ""
-            file.write(f'\n\n{hdr}{idx}\n{cell.source}')
+            file.write(f'\n\n{hdr}{idx}\n{cell.source}') if not solo_nb else file.write(f'\n\n{cell.source}')
 
 # %% ../nbs/api/01_config.ipynb
 def _basic_export_nb(fname, name, dest=None):
