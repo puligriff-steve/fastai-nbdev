@@ -275,48 +275,29 @@ def _save_cached_contributing(cache, cfg, contrib_nb):
     contrib_file = tmp_doc_path / 'CONTRIBUTING.md'
     if contrib_file.exists():
         final_path = cfg.config_path / 'CONTRIBUTING.md'
-        if final_path.exists(): final_path.unlink()  # Py3.7 doesn't have missing_ok
+        if final_path.exists(): final_path.unlink() # py37 doesn't have `missing_ok`
         move(contrib_file, final_path)
-        # Move any supporting files folder
-        assets_folder = tmp_doc_path / (Path(contrib_nb).stem + '_files')
-        if assets_folder.exists():
-            _copytree(assets_folder, cfg.config_path / assets_folder.name)
+        assets_folder = tmp_doc_path / (Path(contrib_nb).stem + '_files') # Supporting files for CONTRIBUTING
+        if assets_folder.exists(): _copytree(assets_folder, cfg.config_path / assets_folder.name)
 
 # %% ../nbs/api/14_quarto.ipynb
 @call_parse
 def nbdev_contributing(
-    path:str=None,  # Path to notebooks (defaults to nbs_path)
+    path:str=None,  # Path to notebooks
     chk_time:bool=False  # Only build if out-of-date
 ):
-    """
-    Create CONTRIBUTING.md from contributing_nb (defaults to 'contributing.ipynb' if present).
-    Skips if the file doesn't exist.
-    """
+    """Create CONTRIBUTING.md from contributing_nb (defaults to 'contributing.ipynb' if present). Skips if the file doesn't exist."""
     cfg = get_config()
     path = Path(path) if path else cfg.nbs_path
-    
-    # Decide which notebook is your "contributing" NB (you can hardcode or add to settings.ini)
     contrib_nb_name = cfg.get('contributing_nb', 'contributing.ipynb')
     contrib_nb_path = path / contrib_nb_name
+    if not contrib_nb_path.exists(): return
+    if chk_time and _doc_mtime_not_older(cfg.config_path / 'CONTRIBUTING.md' , contrib_nb_path): return
     
-    contrib_md = cfg.config_path / 'CONTRIBUTING.md'
-    
-    # If out of date check is requested, skip if up-to-date or missing
-    if chk_time and _doc_mtime_not_older(contrib_md, contrib_nb_path):
-        return
-    
-    # If there's no contributing notebook, do nothing
-    if not contrib_nb_path.exists():
-        return
-    
-    # Temporarily remove sidebar.yml so Quarto doesn't try to build the entire site
-    with _SidebarYmlRemoved(path):
+    with _SidebarYmlRemoved(path): # to avoid rendering whole website
         cache = proc_nbs(path)
-        
-        # Render a single .ipynb -> .md in GFM
         _sprun(f'cd "{cache}" && quarto render "{cache/contrib_nb_name}" -o CONTRIBUTING.md -t gfm --no-execute')
         
-    # Copy the newly created CONTRIBUTING.md and _files folder back to the repo root
     _save_cached_contributing(cache, cfg, contrib_nb_name)
 
 
