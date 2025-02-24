@@ -300,7 +300,6 @@ def nbdev_contributing(
         
     _save_cached_contributing(cache, cfg, contrib_nb_name)
 
-
 # %% ../nbs/api/14_quarto.ipynb
 @call_parse
 @delegates(_nbglob_docs)
