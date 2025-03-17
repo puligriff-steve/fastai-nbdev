@@ -2,6 +2,29 @@
 
 <!-- do not remove -->
 
+## 2.3.36
+
+### New Features
+
+- Use plum dispatch ([#1507](https://github.com/AnswerDotAI/nbdev/pull/1507)), thanks to [@RensDimmendaal](https://github.com/RensDimmendaal)
+- auto-generate contribute.md from notebook ([#1497](https://github.com/AnswerDotAI/nbdev/pull/1497)), thanks to [@bclavie](https://github.com/bclavie)
+- Add exporting single notebook outside nbdev project ([#1489](https://github.com/AnswerDotAI/nbdev/pull/1489)), thanks to [@radekosmulski](https://github.com/radekosmulski)
+- add llms.txt ([#1485](https://github.com/AnswerDotAI/nbdev/pull/1485)), thanks to [@radekosmulski](https://github.com/radekosmulski)
+- Support for Quarto 1.6 `_brand.yml` ([#1484](https://github.com/AnswerDotAI/nbdev/pull/1484)), thanks to [@marcusinthesky](https://github.com/marcusinthesky)
+- Change symbols dict logic to prioritize builtins ([#1482](https://github.com/AnswerDotAI/nbdev/pull/1482)), thanks to [@ncoop57](https://github.com/ncoop57)
+- Update NbdevLookup to support import aliases and improve docstrings ([#1471](https://github.com/AnswerDotAI/nbdev/pull/1471)), thanks to [@ncoop57](https://github.com/ncoop57)
+- Html renderer improvements ([#1463](https://github.com/AnswerDotAI/nbdev/pull/1463)), thanks to [@Isaac-Flath](https://github.com/Isaac-Flath)
+- Watch export ([#1454](https://github.com/AnswerDotAI/nbdev/pull/1454)), thanks to [@Isaac-Flath](https://github.com/Isaac-Flath)
+
+### Bugs Squashed
+
+- New execnb required due to ipython 9 deprecation ([#1504](https://github.com/AnswerDotAI/nbdev/issues/1504))
+- fix: update workflow paths from fastai to answerdotai ([#1496](https://github.com/AnswerDotAI/nbdev/pull/1496)), thanks to [@n-e-w](https://github.com/n-e-w)
+- Fix llmctxissue ([#1491](https://github.com/AnswerDotAI/nbdev/pull/1491)), thanks to [@hamelsmu](https://github.com/hamelsmu)
+- Export on modified only bug fix ([#1456](https://github.com/AnswerDotAI/nbdev/pull/1456)), thanks to [@Isaac-Flath](https://github.com/Isaac-Flath)
+- Regex Syntax Warning Fix ([#1453](https://github.com/AnswerDotAI/nbdev/pull/1453)), thanks to [@Isaac-Flath](https://github.com/Isaac-Flath)
+
+
 ## 2.3.34
 
 ### New Features
