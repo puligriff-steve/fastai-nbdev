@@ -190,6 +190,7 @@ def show_doc(sym,  # Symbol to document
         p,m = renderer.rsplit('.', 1)
         renderer = getattr(import_module(p), m)
     if isinstance(sym, Function): pass
+    elif isinstance_str(sym, "TypeDispatch"): pass  # use _str as TypeDispatch will be removed from fastcore
     else:return renderer(sym or show_doc, name=name, title_level=title_level)
 
 # %% ../nbs/api/08_showdoc.ipynb
