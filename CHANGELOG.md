@@ -2,6 +2,13 @@
 
 <!-- do not remove -->
 
+## 2.3.37
+
+### New Features
+
+- Update fastcore dep to 1.8.0 for plum-dispatch ([#1508](https://github.com/AnswerDotAI/nbdev/issues/1508))
+
+
 ## 2.3.36
 
 ### New Features
