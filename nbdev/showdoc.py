@@ -13,7 +13,6 @@ from fastcore.utils import *
 from importlib import import_module
 import inspect, sys
 from collections import OrderedDict
-from plum import Function
 from textwrap import fill
 from types import FunctionType
 
@@ -189,7 +188,7 @@ def show_doc(sym,  # Symbol to document
     elif isinstance(renderer,str):
         p,m = renderer.rsplit('.', 1)
         renderer = getattr(import_module(p), m)
-    if isinstance(sym, Function): pass
+    if isinstance_str(sym, "Function"): pass
     elif isinstance_str(sym, "TypeDispatch"): pass  # use _str as TypeDispatch will be removed from fastcore
     else:return renderer(sym or show_doc, name=name, title_level=title_level)
 
