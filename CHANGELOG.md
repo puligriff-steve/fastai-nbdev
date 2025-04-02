@@ -2,7 +2,7 @@
 
 <!-- do not remove -->
 
-## 2.4.0
+## 2.4.1
 
 ### Breaking Changes
 
