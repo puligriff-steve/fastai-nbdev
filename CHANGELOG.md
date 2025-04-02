@@ -2,6 +2,17 @@
 
 <!-- do not remove -->
 
+## 2.4.0
+
+### Breaking Changes
+
+- `update_pyproject` defaults to True, so existing custom pyproject files will be replaced or may cause an exception, unless `update_pyproject` config is set to False
+
+### New Features
+
+- New `update_pyproject` config option to auto-generate or update pyproject.toml ([#1515](https://github.com/AnswerDotAI/nbdev/issues/1515))
+
+
 ## 2.3.37
 
 ### New Features
