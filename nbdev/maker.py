@@ -170,10 +170,10 @@ def _last_future(self:ModuleMaker, cells):
     except ValueError: return 0
 
 # %% ../nbs/api/02_maker.ipynb
-def _import2relative(cells, lib_name=None):
-    "Converts `cells` to use `import2relative` based on `lib_name`"
-    if lib_name is None: lib_name = get_config().lib_name
-    for cell in cells: cell.import2relative(lib_name)
+def _import2relative(cells, lib_path=None):
+    "Converts `cells` to use `import2relative` based on `lib_path`"
+    if lib_path is None: lib_path = get_config().lib_path
+    for cell in cells: cell.import2relative(lib_path)
 
 # %% ../nbs/api/02_maker.ipynb
 def _retr_mdoc(cells):
