@@ -2,6 +2,14 @@
 
 <!-- do not remove -->
 
+
+## 2.4.2
+
+### Bugs Squashed
+
+- `lib_name` used incorrectly instead of `repo` and `lib_path` ([#1516](https://github.com/AnswerDotAI/nbdev/issues/1516))
+
+
 ## 2.4.1
 
 ### Breaking Changes
