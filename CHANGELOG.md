@@ -2,6 +2,13 @@
 
 <!-- do not remove -->
 
+## 2.4.4
+
+### Bugs Squashed
+
+- Support older pkg_resources ([#1525](https://github.com/AnswerDotAI/nbdev/issues/1525))
+
+
 ## 2.4.3
 
 ### New Features
