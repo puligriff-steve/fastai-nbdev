@@ -7,7 +7,6 @@ from __future__ import annotations
 from .doclinks import *
 from .config import get_config
 
-from fastcore.dispatch import TypeDispatch
 from fastcore.docments import *
 from fastcore.utils import *
 
@@ -189,7 +188,8 @@ def show_doc(sym,  # Symbol to document
     elif isinstance(renderer,str):
         p,m = renderer.rsplit('.', 1)
         renderer = getattr(import_module(p), m)
-    if isinstance(sym, TypeDispatch): pass
+    if isinstance_str(sym, "Function"): pass
+    elif isinstance_str(sym, "TypeDispatch"): pass  # use _str as TypeDispatch will be removed from fastcore
     else:return renderer(sym or show_doc, name=name, title_level=title_level)
 
 # %% ../nbs/api/08_showdoc.ipynb
@@ -251,5 +251,5 @@ def colab_link(path):
     from IPython.display import Markdown
     cfg = get_config()
     pre = 'https://colab.research.google.com/github/'
-    res = f'{pre}{cfg.user}/{cfg.lib_name}/blob/{cfg.branch}/{cfg.nbs_path.name}/{path}.ipynb'
+    res = f'{pre}{cfg.user}/{cfg.repo}/blob/{cfg.branch}/{cfg.nbs_path.name}/{path}.ipynb'
     display(Markdown(f'[Open `{path}` in Colab]({res})'))

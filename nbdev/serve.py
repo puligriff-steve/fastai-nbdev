@@ -36,7 +36,7 @@ def _is_qpy(path:Path):
 
 # %% ../nbs/api/17_serve.ipynb
 def _proc_file(s, cache, path, mtime=None):
-    skips = ('_proc', '_docs', '_site')
+    skips = ('_proc', '_docs', '_site', 'settings.ini')
     if not s.is_file() or any(o[0]=='.' or o in skips for o in s.parts): return
     d = cache/s.relative_to(path)
     if s.suffix=='.py': d = d.with_suffix('')
@@ -66,6 +66,7 @@ def proc_nbs(
     path = Path(path or cfg.nbs_path)
     files = nbglob(path, func=Path, file_glob='', file_re='', **kwargs)
     if (path/'_quarto.yml').exists(): files.append(path/'_quarto.yml')
+    if (path/'_brand.yml').exists(): files.append(path/'_brand.yml')
     if (path/'_extensions').exists(): files.extend(nbglob(path/'_extensions', func=Path, file_glob='', file_re='', skip_file_re='^[.]'))
 
     # If settings.ini or filter script newer than cache folder modified, delete cache

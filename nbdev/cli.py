@@ -13,7 +13,7 @@ from .processors import *
 from .doclinks import *
 from .test import *
 from .clean import *
-from .quarto import nbdev_readme, refresh_quarto_yml, fs_watchdog
+from .quarto import nbdev_readme, nbdev_contributing, refresh_quarto_yml, fs_watchdog
 from .export import nb_export
 from .frontmatter import FrontmatterProc
 
@@ -91,7 +91,7 @@ def nbdev_new(**kwargs):
     _update_repo_meta(cfg)
     path = Path()
 
-    _ORG_OR_USR,_REPOSITORY = 'fastai','nbdev-template'
+    _ORG_OR_USR,_REPOSITORY = 'answerdotai','nbdev-template'
     _TEMPLATE = f'{_ORG_OR_USR}/{_REPOSITORY}'
     template = kwargs.get('template', _TEMPLATE)
     try: org_or_usr, repo = template.split('/')
@@ -121,6 +121,7 @@ def nbdev_new(**kwargs):
     refresh_quarto_yml()
     nbdev_export.__wrapped__()
     nbdev_readme.__wrapped__()
+    nbdev_contributing.__wrapped__()
 
 # %% ../nbs/api/13_cli.ipynb
 mapping = {

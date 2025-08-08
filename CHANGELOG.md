@@ -2,6 +2,105 @@
 
 <!-- do not remove -->
 
+## 2.4.5
+
+### New Features
+
+- Ignore failures to get mod index ([#1528](https://github.com/AnswerDotAI/nbdev/issues/1528))
+- Keep tags ([#1527](https://github.com/AnswerDotAI/nbdev/issues/1527))
+
+
+## 2.4.4
+
+### Bugs Squashed
+
+- Support older pkg_resources ([#1525](https://github.com/AnswerDotAI/nbdev/issues/1525))
+
+
+## 2.4.3
+
+### New Features
+
+- Remove obsolete pkg_resources ([#1525](https://github.com/AnswerDotAI/nbdev/issues/1525))
+- Update package build process and add 'build' to requirements ([#1524](https://github.com/AnswerDotAI/nbdev/pull/1524)), thanks to [@RensDimmendaal](https://github.com/RensDimmendaal)
+
+
+## 2.4.2
+
+### Bugs Squashed
+
+- `lib_name` used incorrectly instead of `repo` and `lib_path` ([#1516](https://github.com/AnswerDotAI/nbdev/issues/1516))
+
+
+## 2.4.1
+
+### Breaking Changes
+
+- `update_pyproject` defaults to True, so existing custom pyproject files will be replaced or may cause an exception, unless `update_pyproject` config is set to False
+
+### New Features
+
+- New `update_pyproject` config option to auto-generate or update pyproject.toml ([#1515](https://github.com/AnswerDotAI/nbdev/issues/1515))
+
+
+## 2.3.37
+
+### New Features
+
+- Update fastcore dep to 1.8.0 for plum-dispatch ([#1508](https://github.com/AnswerDotAI/nbdev/issues/1508))
+
+
+## 2.3.36
+
+### New Features
+
+- Use plum dispatch ([#1507](https://github.com/AnswerDotAI/nbdev/pull/1507)), thanks to [@RensDimmendaal](https://github.com/RensDimmendaal)
+- auto-generate contribute.md from notebook ([#1497](https://github.com/AnswerDotAI/nbdev/pull/1497)), thanks to [@bclavie](https://github.com/bclavie)
+- Add exporting single notebook outside nbdev project ([#1489](https://github.com/AnswerDotAI/nbdev/pull/1489)), thanks to [@radekosmulski](https://github.com/radekosmulski)
+- add llms.txt ([#1485](https://github.com/AnswerDotAI/nbdev/pull/1485)), thanks to [@radekosmulski](https://github.com/radekosmulski)
+- Support for Quarto 1.6 `_brand.yml` ([#1484](https://github.com/AnswerDotAI/nbdev/pull/1484)), thanks to [@marcusinthesky](https://github.com/marcusinthesky)
+- Change symbols dict logic to prioritize builtins ([#1482](https://github.com/AnswerDotAI/nbdev/pull/1482)), thanks to [@ncoop57](https://github.com/ncoop57)
+- Update NbdevLookup to support import aliases and improve docstrings ([#1471](https://github.com/AnswerDotAI/nbdev/pull/1471)), thanks to [@ncoop57](https://github.com/ncoop57)
+- Html renderer improvements ([#1463](https://github.com/AnswerDotAI/nbdev/pull/1463)), thanks to [@Isaac-Flath](https://github.com/Isaac-Flath)
+- Watch export ([#1454](https://github.com/AnswerDotAI/nbdev/pull/1454)), thanks to [@Isaac-Flath](https://github.com/Isaac-Flath)
+
+### Bugs Squashed
+
+- New execnb required due to ipython 9 deprecation ([#1504](https://github.com/AnswerDotAI/nbdev/issues/1504))
+- fix: update workflow paths from fastai to answerdotai ([#1496](https://github.com/AnswerDotAI/nbdev/pull/1496)), thanks to [@n-e-w](https://github.com/n-e-w)
+- Fix llmctxissue ([#1491](https://github.com/AnswerDotAI/nbdev/pull/1491)), thanks to [@hamelsmu](https://github.com/hamelsmu)
+- Export on modified only bug fix ([#1456](https://github.com/AnswerDotAI/nbdev/pull/1456)), thanks to [@Isaac-Flath](https://github.com/Isaac-Flath)
+- Regex Syntax Warning Fix ([#1453](https://github.com/AnswerDotAI/nbdev/pull/1453)), thanks to [@Isaac-Flath](https://github.com/Isaac-Flath)
+
+
+## 2.3.34
+
+### New Features
+
+- Migrate index creation from nbdev-index ([#1478](https://github.com/AnswerDotAI/nbdev/pull/1478)), thanks to [@ncoop57](https://github.com/ncoop57)
+
+
+## 2.3.33
+
+### New Features
+
+- Improve error handling in `_build_lookup_table` entry points ([#1474](https://github.com/AnswerDotAI/nbdev/pull/1474)), thanks to [@ncoop57](https://github.com/ncoop57)
+
+
+## 2.3.32
+
+### New Features
+
+- Improve backtick regex matching for function names ([#1469](https://github.com/fastai/nbdev/pull/1469)), thanks to [@ncoop57](https://github.com/ncoop57)
+- make `nb_export` a cli [Enhancement] ([#1450](https://github.com/fastai/nbdev/pull/1450)), thanks to [@hamelsmu](https://github.com/hamelsmu)
+- Make `nbdev_export` work outside nbdev repos ([#799](https://github.com/fastai/nbdev/issues/799))
+
+### Bugs Squashed
+
+- Use `r` strings to avoid new Python SyntaxWarnings in regex ([#1452](https://github.com/fastai/nbdev/issues/1452))
+- Nested `lib_path` values break module -> notebook sync ([#1393](https://github.com/fastai/nbdev/issues/1393))
+
+
 ## 2.3.31
 
 ### New Features
